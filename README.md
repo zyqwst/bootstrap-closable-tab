@@ -12,7 +12,8 @@
     <!-- 相关代码结束 -->
 ```
 3. 添加标签
-> 执行bootstrap-closable-tab.js中的方法closableTab.addTab(item)参数item是一个数组 {id,name,url,closable}id tab标签的id，不允许重复；
+> 执行bootstrap-closable-tab.js中的方法closableTab.addTab(item)参数item是一个数组 {id,name,url,closable}  
+> *id* tab标签的id，不允许重复；
 > *name* tab便签上面显示的标题；  
 > *tab* 标签页里面要加载的页面（不支持跨域访问）；  
 > *closalbe* boolean类型，是否显示关闭图标。    

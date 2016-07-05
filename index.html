@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>可关闭的tab</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="form-inline">
+			  <div class="form-group">
+			    <label for="id">ID</label>
+			    <input type="text" class="form-control" id="id" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="text" class="form-control" id="name" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="frametype">URL</label>
+			     <input type="text" class="form-control" id="url" placeholder="">
+			  </div>
+			  <div class="form-group">
+				  <label for="closable">closable</label>
+				  <select id="closable" class="form-control">
+				  	<option value="1">可关闭</option>
+				  	<option value="0">不可关闭</option>
+				  </select>
+			  </div>
+			  <button class="btn btn-default" onclick="add();">添加</button>
+			</div>
+		</div>
+		<div class="row">
+
+		  <!-- 此处是相关代码 -->
+		  <ul class="nav nav-tabs" role="tablist">
+		   
+		  </ul>
+		  <div class="tab-content" style="width:100%;">
+		    
+		  </div>
+		  <!-- 相关代码结束 -->
+		</div>
+	</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="bootstrap-closable-tab.js"></script>
+<script>
+	$(function(){
+		var item = {'id':'1','name':'首页','url':'son.html','closable':false};
+		closableTab.addTab(item);
+	})
+	function add(){
+		var id = $('#id').val();
+		var name = $('#name').val();
+		var uri = $('#url').val();
+		var closable = $('#closable').val();
+		var item = {'id':id,'name':name,'url':uri,'closable':closable==1?true:false};
+		closableTab.addTab(item);
+	}
+</script>
+</html>

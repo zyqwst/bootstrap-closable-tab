@@ -2,7 +2,6 @@ var closableTab = {
 	//frame加载完成后设置父容器的高度，使iframe页面与父页面无缝对接
 	frameLoad:function (frame){
 			var mainheight = $(frame).contents().find('body').height();
-			alert($(window).height()+":"+mainheight);
 			$(frame).parent().height(mainheight);
 		},
 

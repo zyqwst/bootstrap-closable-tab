@@ -12,6 +12,7 @@
     <!-- 相关代码结束 -->
 ```
 3. 添加标签
+
 > 执行bootstrap-closable-tab.js中的方法closableTab.addTab(item)<br> 
 参数item是一个数组 {id,name,url,closable} <br>
 id tab标签的id，不允许重复；<br>

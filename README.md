@@ -19,6 +19,7 @@ id tab标签的id，不允许重复；<br>
 name tab便签上面显示的标题；<br>
 tab 标签页里面要加载的页面（不支持跨域访问);<br>
 closalbe boolean类型，是否显示关闭图标。<br>
+
 4. Example
 ```
     var item = {'id':'1','name':'首页','url':'son.html','closable':false};

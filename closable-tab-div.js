@@ -1,12 +1,6 @@
+//子页面不用iframe，用div展示
 var closableTab = {
-	//frame加载完成后设置父容器的高度，使iframe页面与父页面无缝对接
-	frameLoad:function (frame){
-
-			var mainheight = $(frame).contents().find('body').height();
-			alert(mainheight);
-			$(frame).parent().height(mainheight);
-		},
-
+	
     //添加tab
 	addTab:function(tabItem){ //tabItem = {id,name,url,closable}
 
@@ -25,12 +19,17 @@ var closableTab = {
 			}
 		
 		 	var tabpanel = '<div role="tabpanel" class="tab-pane" id="'+container+'" style="width: 100%;">'+
-	    					  '<iframe src="'+tabItem.url+'" id="tab_frame_2" frameborder="0" style="overflow-x: hidden; overflow-y: hidden;width:100%;height: 100%"  onload="closableTab.frameLoad(this)"></iframe>'+
+	    					  '正在加载...'+
 	    				   '</div>';
 
 
 			$('.nav-tabs').append(li_tab);
 			$('.tab-content').append(tabpanel);
+			$('#'+container).load(tabItem.url,function(response,status,xhr){
+				if(status=='error'){//status的值为success和error，如果error则显示一个错误页面
+					$(this).html(response);
+				}
+			});
 		}
 		$("#"+id).addClass("active");
 		$("#"+container).addClass("active");

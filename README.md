@@ -25,3 +25,5 @@ closalbe boolean类型，是否显示关闭图标。<br>
     var item = {'id':'1','name':'首页','url':'son.html','closable':false};
     closableTab.addTab(item);
 ```
+### 废弃子页面用iframe显示的方式吧
+> iframe展示子页面一度成为国内后台管理系统开发的主流。但是h5的出现，iframe的适应性有点不尽人意。closable-tab-div.js是另一种可关闭tab的子页面展示方式，很多优点只有你使用了才能发现。

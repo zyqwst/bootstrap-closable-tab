@@ -3,7 +3,6 @@ var closableTab = {
 	frameLoad:function (frame){
 
 			var mainheight = $(frame).contents().find('body').height();
-			alert(mainheight);
 			$(frame).parent().height(mainheight);
 		},
 

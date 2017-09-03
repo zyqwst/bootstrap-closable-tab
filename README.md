@@ -1,5 +1,9 @@
 # bootstrap-closable-tab
 基于bootstrap ，支持关闭的标签页
+
+### 效果
+![效果图](http://upload-images.jianshu.io/upload_images/2287481-f4bdacc26396673e.gif?imageMogr2/auto-orient/strip)
+
 ### 使用方法
 * 引入bootstrap-closable-tab.js文件
 * 在需要显示标签的位置如下代码
